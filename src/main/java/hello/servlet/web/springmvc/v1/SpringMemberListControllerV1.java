@@ -17,6 +17,7 @@ public class SpringMemberListControllerV1 {
     @RequestMapping("/springmvc/v1/members")
     public ModelAndView process() {
         List<Member> members = memberRepository.findAll();
+
         ModelAndView mv = new ModelAndView("members");
         mv.addObject("members", members);
 
